@@ -12,7 +12,7 @@ def sketch(image):
     canny_edges = cv2.Canny(img_gray_blur, 10, 70)
 
     #Invert to binarize the image
-    ret, mask = cv2.threshold(canny_edges, 70, 255, c2.THRESH_BINARY_INV)
+    ret, mask = cv2.threshold(canny_edges, 70, 255, cv2.THRESH_BINARY_INV)
 
     return mask
 
