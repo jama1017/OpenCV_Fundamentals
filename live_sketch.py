@@ -3,7 +3,7 @@ import numpy as np
 
 def sketch(image):
     #convert image to greyscale
-    img_gray = cv2.cvtcColor(image, cv2.COLOR_BGR2GRAY)
+    img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     #clean up image using Gaussian Blur
     img_gray_blur = cv2.GaussianBlue(img_gray, (5,5), 0)
