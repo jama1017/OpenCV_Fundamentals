@@ -10,3 +10,19 @@ def sketch(image):
 
     #Extract edges
     canny_edges = cv2.Canny(img_gray_blur, 10, 70)
+
+    #Invert to binarize the image
+    ret, mask = cv2.threshold(canny_edges, 70, 255, c2.THRESH_BINARY_INV)
+
+    return mask
+
+capture = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    cv2.imshow('Sketchy', sketch(frame))
+    if cv2.waitKey(1) == 13: #13 is the Enter waitKey
+        break
+
+capture.release()
+cv2.destroyAllWindows()
