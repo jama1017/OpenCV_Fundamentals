@@ -19,7 +19,7 @@ def sketch(image):
 capture = cv2.VideoCapture(0)
 
 while True:
-    ret, frame = cap.read()
+    ret, frame = capture.read()
     cv2.imshow('Sketchy', sketch(frame))
     if cv2.waitKey(1) == 13: #13 is the Enter waitKey
         break
